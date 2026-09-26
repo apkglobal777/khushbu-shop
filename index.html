@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GramBazaar AI - Local Products ko Digital Market se Jodne ka Aasan Tareeka</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts: Plus Jakarta Sans & Rozha One for Indian craft aesthetic -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Rozha+One&amp;family=Yatra+One&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            earth: {
+              50: '#FBF8F3',
+              100: '#F5ECE1',
+              200: '#EAD7C2',
+              300: '#DCBFA1',
+              500: '#B88658',
+              700: '#8C5A2B',
+              800: '#5C3818',
+              900: '#3D240E',
+            },
+            forest: {
+              50: '#F0F7F3',
+              100: '#DDEFE4',
+              500: '#2E7D4E',
+              600: '#24673F',
+              700: '#1B5031',
+              800: '#143C24',
+            },
+            terracotta: {
+              500: '#D95D39',
+              600: '#BF4826',
+            },
+            whatsapp: {
+              500: '#25D366',
+              600: '#20BA5A',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            craft: ['"Rozha One"', 'serif'],
+            hindi: ['"Yatra One"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    html { scroll-behavior: smooth; }
+    .artisan-pattern {
+      background-color: #FBF8F3;
+      background-image: radial-gradient(#DCBFA1 0.75px, transparent 0.75px), radial-gradient(#DCBFA1 0.75px, #FBF8F3 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+    .badge-shimmer {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 2.5s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+  </style>
+</head>
+<body class="font-sans bg-earth-50 text-stone-800 antialiased selection:bg-forest-100 selection:text-forest-800">
+<!-- TOP BANNER -->
+<div class="bg-forest-700 text-earth-100 px-4 py-2 text-xs md:text-sm font-medium flex items-center justify-between border-b border-forest-600">
+<div class="container mx-auto flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-400/30">
+          🇮🇳 Make in Rural India
+        </span>
+<span>Empowering 1,200+ Gaon ke Karigar with Direct AI Digital Sales</span>
+</div>
+<div class="flex items-center gap-4 text-xs">
+<span class="hidden sm:inline-flex items-center gap-1 text-forest-100/90">
+<i class="w-3.5 h-3.5 text-emerald-400" data-lucide="check-circle-2"></i> Zero Middleman Commission
+        </span>
+<span class="inline-flex items-center gap-1 text-amber-300 font-semibold">
+<i class="w-3.5 h-3.5" data-lucide="phone-call"></i> Seller Helpline: +91 98765 43210
+        </span>
+</div>
+</div>
+</div>
+<!-- NAVBAR -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-earth-200 shadow-sm transition-all">
+<div class="container mx-auto px-4 lg:px-8 py-3.5 flex items-center justify-between">
+<!-- Logo & Tagline -->
+<a class="flex items-center gap-3 group" href="#home">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-forest-600 to-terracotta-500 flex items-center justify-center text-white shadow-md shadow-forest-900/10 group-hover:scale-105 transition-transform">
+<i class="w-6 h-6" data-lucide="sparkles"></i>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-2xl font-bold tracking-tight text-forest-800 font-craft">GramBazaar</span>
+<span class="text-xs uppercase tracking-wider font-extrabold px-1.5 py-0.5 rounded bg-terracotta-500 text-white shadow-xs">AI</span>
+</div>
+<p class="text-[11px] text-stone-500 font-medium tracking-tight">Local Products ko Digital Market se jodne ka aasan tareeka</p>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+<a class="hover:text-forest-600 transition-colors" href="#home">Home</a>
+<a class="hover:text-forest-600 transition-colors flex items-center gap-1" href="#products">
+<span>Products</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-forest-100 text-forest-700 font-bold">100% Handcrafted</span>
+</a>
+<a class="hover:text-forest-600 text-terracotta-600 flex items-center gap-1 font-bold" href="#ai-assistant">
+<i class="w-4 h-4" data-lucide="wand-2"></i> AI Seller Assistant
+        </a>
+<a class="hover:text-forest-600 transition-colors" href="#about">About Us</a>
+</nav>
+<!-- Action CTA & Mobile Menu Toggle -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-forest-600 text-white text-xs md:text-sm font-bold shadow-sm hover:bg-forest-700 transition active:scale-95" href="#ai-assistant">
+<i class="w-4 h-4 text-emerald-300" data-lucide="bot"></i>
+<span>Seller AI Tool</span>
+</a>
+<button aria-label="Toggle menu" class="md:hidden p-2 rounded-lg text-stone-700 hover:bg-earth-100" id="mobile-menu-btn">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Dropdown -->
+<div class="hidden md:hidden border-t border-earth-200 bg-white px-4 py-4 space-y-3 shadow-lg" id="mobile-nav">
+<a class="block py-2 text-stone-800 font-semibold hover:text-forest-600" href="#home">Home</a>
+<a class="block py-2 text-stone-800 font-semibold hover:text-forest-600" href="#products">Products Showcase</a>
+<a class="block py-2 text-terracotta-600 font-bold flex items-center gap-2" href="#ai-assistant">
+<i class="w-4 h-4" data-lucide="wand-2"></i> AI Seller Assistant
+      </a>
+<a class="block py-2 text-stone-800 font-semibold hover:text-forest-600" href="#about">About GramBazaar</a>
+<div class="pt-2">
+<a class="w-full text-center block py-2.5 rounded-xl bg-forest-600 text-white font-bold text-sm" href="#products">
+          Browse Village Crafts
+        </a>
+</div>
+</div>
+</header>
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden artisan-pattern py-14 lg:py-20 border-b border-earth-200" id="home">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: Copy & Value Proposition -->
+<div class="lg:col-span-7 space-y-6 text-left">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-100 border border-forest-200 text-forest-700 text-xs font-bold">
+<span class="w-2 h-2 rounded-full bg-forest-600 animate-pulse"></span>
+            Direct Gaon se Aapke Ghar Tak • 100% Genuine
+          </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]">
+            Sanskriti aur Hunar ka <br/>
+<span class="text-terracotta-600 font-craft">Digital Bazaar</span>
+</h1>
+<p class="text-base sm:text-lg text-stone-600 max-w-2xl leading-relaxed">
+            Discover authentic terracotta pottery, handwoven bamboo baskets, pure organic wild honey, and indigenous textiles crafted by gifted village artisans. Easy 1-click WhatsApp order with direct payments to artisans.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-base shadow-lg shadow-terracotta-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0" href="#products">
+<i class="w-5 h-5" data-lucide="shopping-bag"></i>
+<span>Browse Products</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-earth-300 text-forest-700 hover:bg-earth-100 font-bold text-base transition-colors shadow-sm" href="#ai-assistant">
+<i class="w-5 h-5 text-amber-500" data-lucide="sparkles"></i>
+<span>Try AI Seller Tool</span>
+</a>
+</div>
+<!-- Quick Trust Badges -->
+<div class="pt-6 border-t border-earth-200 grid grid-cols-3 gap-4 max-w-lg">
+<div>
+<div class="text-2xl font-black text-forest-700">₹0</div>
+<div class="text-xs text-stone-500 font-medium">Middleman Cut</div>
+</div>
+<div>
+<div class="text-2xl font-black text-terracotta-600">450+</div>
+<div class="text-xs text-stone-500 font-medium">Artisans Listed</div>
+</div>
+<div>
+<div class="text-2xl font-black text-forest-700">1-Click</div>
+<div class="text-xs text-stone-500 font-medium">WhatsApp Booking</div>
+</div>
+</div>
+</div>
+<!-- Right: Visual Card Cluster / Hero Showcase -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md">
+<!-- Decorative circle -->
+<div class="absolute -top-8 -left-8 w-64 h-64 bg-amber-200/50 rounded-full filter blur-2xl -z-10"></div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-forest-200/40 rounded-full filter blur-2xl -z-10"></div>
+<!-- Featured Showcase Card -->
+<div class="bg-white rounded-2xl p-4 shadow-xl border border-earth-200 relative">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-stone-100">
+<img alt="Rural Pottery Artisan at Wheel" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="absolute top-3 left-3 bg-stone-900/80 backdrop-blur-md text-amber-300 text-xs font-semibold px-2.5 py-1 rounded-md flex items-center gap-1">
+<i class="w-3.5 h-3.5 text-terracotta-500" data-lucide="map-pin"></i>
+<span>Khanna Village, MP</span>
+</div>
+<div class="absolute bottom-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Artisan Verified ✓
+                </div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<h3 class="font-bold text-stone-900 text-base">Ramdayal Prajapati</h3>
+<p class="text-xs text-stone-500">Master Craftsman • 3rd Gen Terracotta Potter</p>
+</div>
+<div class="text-right">
+<span class="text-xs text-stone-400 block">Avg Monthly Earning</span>
+<span class="text-forest-600 font-bold text-sm">+85% via WhatsApp</span>
+</div>
+</div>
+<!-- Floating Micro-badge -->
+<div class="mt-3.5 p-2.5 bg-earth-50 rounded-xl border border-earth-200 flex items-center gap-3 text-xs text-stone-700">
+<span class="p-1.5 rounded-lg bg-whatsapp-500/10 text-whatsapp-600">
+<i class="w-4 h-4" data-lucide="message-circle"></i>
+</span>
+<span><strong>Instant WhatsApp Connect:</strong> Buyer directly chats with the weaver or potter.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRODUCTS SHOWCASE SECTION -->
+<section class="py-16 bg-white border-b border-earth-200" id="products">
+<div class="container mx-auto px-4 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+<div>
+<div class="inline-flex items-center gap-1.5 text-terracotta-600 text-xs font-bold uppercase tracking-wider mb-1">
+<i class="w-4 h-4" data-lucide="gift"></i> Pure Village Treasures
+          </div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-stone-900">Featured Handmade Products</h2>
+<p class="text-stone-500 text-sm mt-1">Every purchase directly supports our rural craft families.</p>
+</div>
+<!-- Filter / Filter tags -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-medium">
+<button class="filter-btn active-filter px-3.5 py-1.5 rounded-full bg-forest-700 text-white font-semibold transition" data-filter="all" onclick="filterProducts('all')">All Items</button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full bg-earth-100 text-stone-700 hover:bg-earth-200 transition" data-filter="Pottery" onclick="filterProducts('Pottery')">Pottery &amp; Clay</button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full bg-earth-100 text-stone-700 hover:bg-earth-200 transition" data-filter="Bamboo" onclick="filterProducts('Bamboo')">Bamboo Crafts</button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full bg-earth-100 text-stone-700 hover:bg-earth-200 transition" data-filter="Organic" onclick="filterProducts('Organic')">Organic &amp; Wild</button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full bg-earth-100 text-stone-700 hover:bg-earth-200 transition" data-filter="Handloom" onclick="filterProducts('Handloom')">Handloom</button>
+</div>
+</div>
+<!-- Products Grid Container -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+<!-- Javascript will populate products or fallback cards below -->
+</div>
+<!-- Artisan Story callout banner -->
+<div class="mt-12 bg-earth-100/70 border border-earth-300 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-terracotta-500 text-white flex items-center justify-center shrink-0 shadow-md">
+<i class="w-6 h-6" data-lucide="heart-handshake"></i>
+</div>
+<div>
+<h4 class="font-bold text-stone-900 text-base md:text-lg">Are you a rural artisan or self-help group (SHG)?</h4>
+<p class="text-stone-600 text-xs md:text-sm">List your local goods in 2 minutes. Free AI descriptions in Hindi and English.</p>
+</div>
+</div>
+<a class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs md:text-sm transition flex items-center gap-2" href="#ai-assistant">
+<span>Launch AI Assistant</span>
+<i class="w-4 h-4" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- AI SELLER ASSISTANT SECTION -->
+<section class="py-16 bg-earth-50 border-b border-earth-200 relative" id="ai-assistant">
+<div class="container mx-auto px-4 lg:px-8">
+<!-- Section Header -->
+<div class="max-w-3xl mx-auto text-center mb-12">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold mb-3">
+<i class="w-3.5 h-3.5 text-amber-600" data-lucide="sparkles"></i> Smart Karigar Marketing Tool
+        </div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-stone-900">AI Seller Assistant</h2>
+<p class="text-stone-600 text-sm md:text-base mt-2">
+          Rural artisans often struggle with social media copywriting and digital marketing. Enter your craft details, and our instant mock AI engine creates ready-to-use descriptions in Hindi and English!
+        </p>
+</div>
+<!-- Tool Workspace Card -->
+<div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-earth-300 overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-earth-200">
+<!-- Left: Input Form Panel -->
+<div class="lg:col-span-5 p-6 md:p-8 bg-white space-y-5">
+<div class="flex items-center justify-between pb-3 border-b border-earth-200">
+<h3 class="font-bold text-stone-900 text-base flex items-center gap-2">
+<i class="w-4 h-4 text-forest-600" data-lucide="sliders"></i>
+<span>Artisan Craft Details</span>
+</h3>
+<button class="text-xs text-terracotta-600 font-bold hover:underline flex items-center gap-1" onclick="loadSampleCraft()">
+<i class="w-3 h-3" data-lucide="rotate-ccw"></i> Load Sample
+              </button>
+</div>
+<!-- Product Title Field -->
+<div>
+<label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="ai-title">
+                Product Title (उत्पाद का नाम) *
+              </label>
+<div class="relative">
+<input class="w-full pl-3.5 pr-4 py-2.5 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white transition" id="ai-title" placeholder="e.g., Mitti ka Desi Water Pot / Handwoven Rug" type="text" value="Natural Terracotta Matka with Brass Tap"/>
+</div>
+</div>
+<!-- Price & Unit Field -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="ai-price">
+                  Price (कीमत ₹) *
+                </label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-stone-400 text-sm font-semibold">₹</span>
+<input class="w-full pl-8 pr-3 py-2.5 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white transition" id="ai-price" placeholder="450" type="number" value="499"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="ai-category">
+                  Craft Category
+                </label>
+<select class="w-full px-3 py-2.5 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white transition" id="ai-category">
+<option value="Pottery">Pottery / मिट्टी</option>
+<option value="Bamboo">Bamboo / बांस</option>
+<option value="Handloom">Handloom / हथकरघा</option>
+<option value="Organic">Organic / शुद्ध प्राकृतिक</option>
+<option value="Woodcraft">Woodcraft / काष्ठ कला</option>
+</select>
+</div>
+</div>
+<!-- Material & Crafting Details -->
+<div>
+<label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="ai-details">
+                Material &amp; Special Highlights
+              </label>
+<textarea class="w-full px-3.5 py-2.5 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white transition resize-none" id="ai-details" placeholder="e.g., 100% organic red river clay, keeps water naturally chilled up to 10 degrees, painted with natural mineral dyes." rows="3">River clay hand-thrown on potter wheel, fired in traditional firewood kiln. Keeps drinking water naturally 8°C cooler without electricity.</textarea>
+</div>
+<!-- Language preference toggle -->
+<div>
+<label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
+                Output Tone &amp; Language
+              </label>
+<div class="grid grid-cols-2 gap-2">
+<button class="lang-btn active-lang px-3 py-2 text-xs font-bold rounded-lg border border-forest-600 bg-forest-50 text-forest-800 transition" id="lang-hinglish" onclick="setAiLang('hinglish')" type="button">
+                  🇮🇳 Hindi + English (Hinglish)
+                </button>
+<button class="lang-btn px-3 py-2 text-xs font-bold rounded-lg border border-earth-300 bg-earth-50 text-stone-600 hover:bg-earth-100 transition" id="lang-english" onclick="setAiLang('english')" type="button">
+                  🌐 Pure English
+                </button>
+</div>
+</div>
+<!-- Generator Action Buttons -->
+<div class="pt-2 space-y-2">
+<p class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Choose Generation Type:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<button class="px-3 py-2.5 bg-forest-600 hover:bg-forest-700 active:scale-95 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition shadow-sm" onclick="triggerAiGeneration('desc')">
+<i class="w-3.5 h-3.5" data-lucide="file-text"></i>
+<span>Description</span>
+</button>
+<button class="px-3 py-2.5 bg-whatsapp-500 hover:bg-whatsapp-600 active:scale-95 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition shadow-sm" onclick="triggerAiGeneration('whatsapp')">
+<i class="w-3.5 h-3.5" data-lucide="message-square"></i>
+<span>WhatsApp</span>
+</button>
+<button class="px-3 py-2.5 bg-gradient-to-r from-pink-500 to-terracotta-500 hover:opacity-90 active:scale-95 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition shadow-sm" onclick="triggerAiGeneration('instagram')">
+<i class="w-3.5 h-3.5" data-lucide="instagram"></i>
+<span>Instagram</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Generated Output Panel -->
+<div class="lg:col-span-7 p-6 md:p-8 bg-earth-50/60 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-earth-200">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-xs font-bold text-forest-700 uppercase tracking-wide" id="output-badge">
+                    Ready to Generate
+                  </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 text-xs font-bold text-stone-700 bg-white border border-earth-300 rounded-lg hover:bg-earth-100 flex items-center gap-1.5 shadow-2xs transition" id="copy-output-btn" onclick="copyAiOutput()">
+<i class="w-3.5 h-3.5" data-lucide="copy"></i>
+<span id="copy-btn-text">Copy Text</span>
+</button>
+</div>
+</div>
+<!-- Output Text Display Area -->
+<div class="mt-4 relative">
+<!-- Generating Loading Overlay -->
+<div class="hidden absolute inset-0 bg-white/80 backdrop-blur-xs rounded-xl flex flex-col items-center justify-center gap-2 z-10" id="ai-loading">
+<i class="w-8 h-8 text-forest-600 animate-spin" data-lucide="loader-2"></i>
+<p class="text-xs font-bold text-stone-700">GramBazaar AI is writing creative copy...</p>
+</div>
+<div class="w-full min-h-[280px] p-4 bg-white border border-earth-300 rounded-xl text-stone-800 text-sm leading-relaxed whitespace-pre-line font-mono select-all overflow-y-auto max-h-[360px]" id="ai-output-box">✨ Click any of the three buttons on the left to instantly generate marketing copy!
+
+Example:
+1. "Generate Description" -&gt; Complete e-commerce product copy for websites &amp; catalogs.
+2. "Generate WhatsApp Message" -&gt; Ready-to-broadcast broadcast template with pricing and order prompts.
+3. "Generate Instagram Caption" -&gt; Trendy social media caption with artisan hashtags and storytelling hooks.</div>
+</div>
+</div>
+<!-- Live Stats / Artisan Tip -->
+<div class="mt-6 pt-4 border-t border-earth-200 flex items-center justify-between text-xs text-stone-500">
+<span class="flex items-center gap-1">
+<i class="w-3.5 h-3.5 text-amber-500" data-lucide="lightbulb"></i>
+                Pro Tip: Direct WhatsApp text copy increases rural conversions by 3.2x!
+              </span>
+<span class="font-mono font-medium" id="char-counter">Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT & MISSION SECTION -->
+<section class="py-16 bg-white border-b border-earth-200" id="about">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="max-w-4xl mx-auto space-y-12">
+<div class="text-center space-y-3">
+<div class="inline-flex items-center gap-1.5 text-forest-600 text-xs font-bold uppercase tracking-wider">
+<i class="w-4 h-4" data-lucide="compass"></i> Our Social Mission
+          </div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-stone-900">Why GramBazaar AI?</h2>
+<p class="text-stone-600 text-sm md:text-base leading-relaxed">
+            India has millions of generational artisans whose exquisite skills remain confined to weekly village haats due to language barriers, technical friction, and greedy middlemen.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-2xl bg-earth-50 border border-earth-200">
+<div class="w-10 h-10 rounded-xl bg-forest-600 text-white flex items-center justify-center font-bold mb-4 shadow-sm">
+<i class="w-5 h-5" data-lucide="shield-check"></i>
+</div>
+<h3 class="font-bold text-stone-900 text-base mb-2">Direct Payments</h3>
+<p class="text-stone-600 text-xs leading-relaxed">
+              Customers connect directly on WhatsApp with the seller. 100% of the money goes straight to the craftsman's UPI or bank account.
+            </p>
+</div>
+<div class="p-6 rounded-2xl bg-earth-50 border border-earth-200">
+<div class="w-10 h-10 rounded-xl bg-terracotta-500 text-white flex items-center justify-center font-bold mb-4 shadow-sm">
+<i class="w-5 h-5" data-lucide="languages"></i>
+</div>
+<h3 class="font-bold text-stone-900 text-base mb-2">Language Inclusivity</h3>
+<p class="text-stone-600 text-xs leading-relaxed">
+              Our AI Assistant allows rural vendors to describe items simply, automatically translating it into attractive bilingual English/Hinglish copy.
+            </p>
+</div>
+<div class="p-6 rounded-2xl bg-earth-50 border border-earth-200">
+<div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center font-bold mb-4 shadow-sm">
+<i class="w-5 h-5" data-lucide="leaf"></i>
+</div>
+<h3 class="font-bold text-stone-900 text-base mb-2">100% Eco-Friendly</h3>
+<p class="text-stone-600 text-xs leading-relaxed">
+              Bamboo, terracotta, jute, brass, and handloom fabrics — zero plastic and completely biodegradable artisanal heritage.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE ORDER MODAL (WhatsApp Integration) -->
+<div class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="order-modal">
+<div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl border border-earth-200 overflow-hidden transform transition-all animate-in fade-in zoom-in duration-200">
+<!-- Modal Header -->
+<div class="bg-forest-700 text-white p-5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+<i class="w-5 h-5 text-emerald-300" data-lucide="shopping-cart"></i>
+</div>
+<div>
+<h3 class="font-bold text-base leading-tight">Order via WhatsApp</h3>
+<p class="text-xs text-forest-100">Direct booking with rural artisan</p>
+</div>
+</div>
+<button aria-label="Close modal" class="text-white/80 hover:text-white p-1 rounded-lg hover:bg-white/10 transition" onclick="closeOrderModal()">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<!-- Modal Body / Form -->
+<form class="p-6 space-y-4" id="order-form" onsubmit="handleOrderSubmit(event)">
+<!-- Product info badge -->
+<div class="p-3 bg-earth-100/70 border border-earth-200 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Selected Product" class="w-12 h-12 rounded-lg object-cover bg-stone-200 border border-earth-300" id="modal-product-img" src=""/>
+<div>
+<h4 class="font-bold text-stone-900 text-sm" id="modal-product-name">Product Name</h4>
+<p class="text-xs text-forest-700 font-semibold" id="modal-product-price">₹350</p>
+</div>
+</div>
+<span class="text-[11px] font-bold px-2 py-1 bg-white rounded-md text-stone-600 border border-earth-200">In Stock</span>
+</div>
+<input id="form-product-name" type="hidden"/>
+<input id="form-product-price" type="hidden"/>
+<input id="form-seller-phone" type="hidden" value="919876543210"/>
+<!-- Quantity & Buyer Name -->
+<div class="grid grid-cols-3 gap-3">
+<div class="col-span-2">
+<label class="block text-xs font-bold text-stone-700 mb-1" for="cust-name">
+              Aapka Naam (Customer Name) *
+            </label>
+<input class="w-full px-3 py-2 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white" id="cust-name" placeholder="e.g. Ramesh Kumar" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-stone-700 mb-1" for="cust-qty">
+              Quantity *
+            </label>
+<input class="w-full px-3 py-2 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white text-center font-bold" id="cust-qty" max="50" min="1" required="" type="number" value="1"/>
+</div>
+</div>
+<!-- Phone Number -->
+<div>
+<label class="block text-xs font-bold text-stone-700 mb-1" for="cust-phone">
+            WhatsApp Phone Number *
+          </label>
+<div class="relative">
+<span class="absolute left-3 top-2 text-stone-400 text-sm font-semibold">+91</span>
+<input class="w-full pl-12 pr-3 py-2 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white" id="cust-phone" pattern="[0-9]{10}" placeholder="9876543210" required="" title="Please enter a valid 10-digit mobile number" type="tel"/>
+</div>
+<span class="text-[10px] text-stone-500">Seller will verify order confirmation on this number.</span>
+</div>
+<!-- Delivery Address -->
+<div>
+<label class="block text-xs font-bold text-stone-700 mb-1" for="cust-address">
+            Delivery Address with Pincode *
+          </label>
+<textarea class="w-full px-3 py-2 text-sm bg-earth-50 border border-earth-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white resize-none" id="cust-address" placeholder="House/Flat No., Landmark, City, State, PIN Code" required="" rows="2"></textarea>
+</div>
+<!-- Live WhatsApp preview text box -->
+<div class="p-2.5 bg-stone-100 rounded-xl text-[11px] text-stone-600 border border-stone-200">
+<span class="font-bold text-stone-700 block mb-0.5">ℹ️ How it works:</span>
+          Clicking the button below formats your order with product details, calculation, and shipping address, then launches WhatsApp directly connected to the seller.
+        </div>
+<!-- Submit Button -->
+<button class="w-full py-3 px-4 rounded-xl bg-whatsapp-500 hover:bg-whatsapp-600 active:scale-[0.99] text-white font-bold text-sm shadow-lg shadow-whatsapp-500/25 flex items-center justify-center gap-2 transition" type="submit">
+<i class="w-5 h-5" data-lucide="message-circle"></i>
+<span>Order on WhatsApp (व्हाट्सएप पर ऑर्डर भेजें)</span>
+</button>
+</form>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="bg-stone-900 text-stone-300 pt-14 pb-8 border-t border-stone-800">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+<!-- Col 1: Brand & Overview -->
+<div class="md:col-span-1 space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-forest-600 text-white flex items-center justify-center font-bold">
+<i class="w-4 h-4" data-lucide="sparkles"></i>
+</div>
+<span class="text-xl font-bold text-white font-craft">GramBazaar AI</span>
+</div>
+<p class="text-xs text-stone-400 leading-relaxed">
+            An e-commerce platform bridging village artisans with the digital economy through WhatsApp commerce and generative AI assistance.
+          </p>
+<div class="text-xs text-stone-400 flex items-center gap-1.5 pt-1">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Vercel &amp; Netlify Ready Single-File App</span>
+</div>
+</div>
+<!-- Col 2: Student Learning Links & Tech Stack -->
+<div>
+<h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Student Project Notes</h4>
+<ul class="space-y-2 text-xs text-stone-400">
+<li class="flex items-center gap-2">
+<i class="w-3.5 h-3.5 text-terracotta-500" data-lucide="code"></i> Semantic HTML5 Architecture
+            </li>
+<li class="flex items-center gap-2">
+<i class="w-3.5 h-3.5 text-forest-500" data-lucide="palette"></i> Tailwind CSS Grid &amp; Flexbox
+            </li>
+<li class="flex items-center gap-2">
+<i class="w-3.5 h-3.5 text-amber-500" data-lucide="cpu"></i> Pure Vanilla JS (Zero Framework)
+            </li>
+<li class="flex items-center gap-2">
+<i class="w-3.5 h-3.5 text-whatsapp-500" data-lucide="external-link"></i> WhatsApp wa.me API Integration
+            </li>
+</ul>
+</div>
+<!-- Col 3: Quick Navigation -->
+<div>
+<h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Quick Navigation</h4>
+<ul class="space-y-2 text-xs text-stone-400 font-medium">
+<li><a class="hover:text-emerald-400 transition" href="#home">Home Banner</a></li>
+<li><a class="hover:text-emerald-400 transition" href="#products">Products Catalog</a></li>
+<li><a class="hover:text-emerald-400 transition" href="#ai-assistant">AI Seller Assistant Demo</a></li>
+<li><a class="hover:text-emerald-400 transition" href="#about">Our Artisan Mission</a></li>
+</ul>
+</div>
+<!-- Col 4: Deployment & GitHub Notes -->
+<div>
+<h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Deployment &amp; Submission</h4>
+<p class="text-xs text-stone-400 leading-relaxed mb-3">
+            Ready to be hosted directly on static hosting platforms like Vercel, Netlify, or GitHub Pages as <code class="bg-stone-800 text-amber-300 px-1 py-0.5 rounded">index.html</code>.
+          </p>
+<div class="flex items-center gap-3">
+<a class="p-2 bg-stone-800 hover:bg-stone-700 text-white rounded-lg text-xs flex items-center gap-1.5 transition" href="https://github.com" rel="noreferrer" target="_blank">
+<i class="w-4 h-4" data-lucide="github"></i> GitHub Repo
+            </a>
+<span class="text-[11px] text-stone-500">v1.0.0 Stable</span>
+</div>
+</div>
+</div>
+<!-- Copyright -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-2">
+<p>© 2025 GramBazaar AI. Crafted with ❤️ for Indian Rural Artisans.</p>
+<p>Built for Academic &amp; Social Innovation Showcase</p>
+</div>
+</div>
+</footer>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="bg-stone-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 text-xs font-semibold border border-stone-700">
+<i class="w-4 h-4 text-emerald-400" data-lucide="check" id="toast-icon"></i>
+<span id="toast-message">Notification message</span>
+</div>
+</div>
+<!-- JAVASCRIPT LOGIC -->
+<script>
+    // ----------------------------------------------------
+    // DATA SOURCE: Handcrafted Products List
+    // ----------------------------------------------------
+    const products = [
+      {
+        id: 1,
+        name: "Handmade Bamboo Fruit Basket",
+        category: "Bamboo",
+        price: 350,
+        artisan: "Lata Devi (Assam)",
+        material: "100% Wild Assam Bamboo",
+        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        description: "Naturally treated strong bamboo basket, hand-woven with traditional tribal diamond patterns.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 2,
+        name: "Desi Terracotta Water Pitcher (Matka)",
+        category: "Pottery",
+        price: 499,
+        artisan: "Ramdayal Prajapati (MP)",
+        material: "Natural Riverbed Clay",
+        image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80",
+        description: "Naturally alkaline cooling pot with food-safe brass tap for crisp, refreshing summer water.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 3,
+        name: "Pure Sundarban Wild Raw Honey (500g)",
+        category: "Organic",
+        price: 550,
+        artisan: "Mowali Honey Foragers (WB)",
+        material: "Unprocessed Raw Forest Honey",
+        image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80",
+        description: "Directly harvested from deep mangrove forests. Zero artificial sugar or pasteurization.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 4,
+        name: "Khadi Cotton Hand-Spun Table Runner",
+        category: "Handloom",
+        price: 620,
+        artisan: "Seva Gram Women Weavers",
+        material: "Organic Desi Cotton",
+        image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=600&q=80",
+        description: "Spun on traditional charkha and woven on pit-looms with vegetable turmeric and indigo dyes.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 5,
+        name: "Hand-Carved Sheesham Spice Box",
+        category: "Woodcraft",
+        price: 799,
+        artisan: "Irfan & Sons (Saharanpur)",
+        material: "Seasoned Sheesham Wood & Brass",
+        image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80",
+        description: "Traditional 9-compartment masala dani with floral brass embossed lid and handmade wooden spoon.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 6,
+        name: "Terracotta Hand-Painted Diya Set (6 Pcs)",
+        category: "Pottery",
+        price: 240,
+        artisan: "Kumhar Gram Sangathan",
+        material: "Terracotta with Geru Wash",
+        image: "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=600&q=80",
+        description: "Eco-friendly festive oil lamps hand-carved with traditional peacock motifs by village women.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 7,
+        name: "Natural Jute & Sabai Grass Floor Planter",
+        category: "Bamboo",
+        price: 420,
+        artisan: "Mayurbhanj Sabai Artisans",
+        material: "Braided Sabai Grass & Jute",
+        image: "https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=600&q=80",
+        description: "Sturdy, washable bohemian indoor planter basket crafted by indigenous forest communities.",
+        sellerNumber: "919876543210"
+      },
+      {
+        id: 8,
+        name: "A2 Desi Cow Bilona Ghee (500ml)",
+        category: "Organic",
+        price: 850,
+        artisan: "Vrindavan Gram Gaushala",
+        material: "Cultured Grass-Fed Curd Ghee",
+        image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=600&q=80",
+        description: "Made in small earthen pots using traditional wood-churning bilona method. Rich aroma & nutrients.",
+        sellerNumber: "919876543210"
+      }
+    ];
+
+    let currentFilter = 'all';
+    let currentAiLang = 'hinglish';
+
+    // ----------------------------------------------------
+    // INITIALIZATION & RENDER
+    // ----------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      initLucide();
+      setupMobileNav();
+    });
+
+    function initLucide() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function setupMobileNav() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const nav = document.getElementById('mobile-nav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          nav.classList.toggle('hidden');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => nav.classList.add('hidden'));
+        });
+      }
+    }
+
+    // ----------------------------------------------------
+    // PRODUCT GRID RENDERING & FILTERING
+    // ----------------------------------------------------
+    function renderProducts() {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = '';
+
+      const filtered = currentFilter === 'all' 
+        ? products 
+        : products.filter(p => p.category.toLowerCase() === currentFilter.toLowerCase());
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-stone-500">
+            <i data-lucide="package-search" class="w-10 h-10 mx-auto text-stone-400 mb-2"></i>
+            <p class="font-semibold text-sm">No products found in this category.</p>
+          </div>
+        `;
+        initLucide();
+        return;
+      }
+
+      filtered.forEach(p => {
+        const card = document.createElement('div');
+        card.className = "group bg-white rounded-2xl border border-earth-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <!-- Product Image with Badge -->
+            <div class="relative aspect-4/3 overflow-hidden bg-earth-100">
+              <img 
+                src="${p.image}" 
+                alt="${p.name}" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[11px] font-bold bg-white/95 text-forest-800 shadow-xs border border-earth-200">
+                ${p.category}
+              </span>
+              <span class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-900/80 backdrop-blur-xs text-amber-200">
+                By ${p.artisan}
+              </span>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-4 space-y-2">
+              <div class="flex items-baseline justify-between gap-1">
+                <span class="text-xs font-semibold text-terracotta-600">${p.material}</span>
+                <span class="text-lg font-black text-forest-800">₹${p.price}</span>
+              </div>
+              
+              <h3 class="font-bold text-stone-900 text-sm leading-snug group-hover:text-forest-700 transition">
+                ${p.name}
+              </h3>
+              
+              <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                ${p.description}
+              </p>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <div class="p-4 pt-0">
+            <button 
+              onclick="openOrderModal(${p.id})"
+              class="w-full py-2.5 px-3 rounded-xl bg-forest-700 hover:bg-forest-800 active:scale-[0.98] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition shadow-sm shadow-forest-900/10"
+            >
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Buy / Order on WhatsApp</span>
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      initLucide();
+    }
+
+    function filterProducts(category) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.className = "filter-btn active-filter px-3.5 py-1.5 rounded-full bg-forest-700 text-white font-semibold transition";
+        } else {
+          btn.className = "filter-btn px-3.5 py-1.5 rounded-full bg-earth-100 text-stone-700 hover:bg-earth-200 transition";
+        }
+      });
+      renderProducts();
+    }
+
+    // ----------------------------------------------------
+    // ORDER MODAL & WHATSAPP URL LOGIC
+    // ----------------------------------------------------
+    function openOrderModal(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      document.getElementById('modal-product-img').src = product.image;
+      document.getElementById('modal-product-name').textContent = product.name;
+      document.getElementById('modal-product-price').textContent = `₹${product.price} (Inclusive of local artisan support)`;
+      
+      document.getElementById('form-product-name').value = product.name;
+      document.getElementById('form-product-price').value = product.price;
+      document.getElementById('form-seller-phone').value = product.sellerNumber || "919876543210";
+
+      document.getElementById('cust-qty').value = 1;
+      document.getElementById('order-modal').classList.remove('hidden');
+      initLucide();
+    }
+
+    function closeOrderModal() {
+      document.getElementById('order-modal').classList.add('hidden');
+    }
+
+    // Close on outside click
+    document.getElementById('order-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'order-modal') {
+        closeOrderModal();
+      }
+    });
+
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+      
+      const prodName = document.getElementById('form-product-name').value;
+      const unitPrice = parseFloat(document.getElementById('form-product-price').value);
+      const sellerPhone = document.getElementById('form-seller-phone').value;
+      
+      const name = document.getElementById('cust-name').value.trim();
+      const qty = parseInt(document.getElementById('cust-qty').value) || 1;
+      const phone = document.getElementById('cust-phone').value.trim();
+      const address = document.getElementById('cust-address').value.trim();
+      const totalAmount = unitPrice * qty;
+
+      if (!name || !phone || !address) {
+        showToast("Please fill all order details!", "alert-circle");
+        return;
+      }
+
+      // Format WhatsApp Message
+      const message = 
+`🙏 Namaste GramBazaar Artisan!
+I want to place an order via GramBazaar AI platform.
+
+📦 *Order Details:*
+• Item: ${prodName}
+• Quantity: ${qty}
+• Unit Price: ₹${unitPrice}
+• *Total Payable: ₹${totalAmount}*
+
+👤 *Customer Details:*
+• Name: ${name}
+• WhatsApp: +91 ${phone}
+• Delivery Address: ${address}
+
+⚡ Please confirm product availability and share your UPI QR / Payment details. Thank you!`;
+
+      // Construct WhatsApp URL
+      const encodedMsg = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${sellerPhone}?text=${encodedMsg}`;
+
+      // Show confirmation toast & trigger redirect
+      showToast("Redirecting to WhatsApp...", "message-circle");
+      
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        closeOrderModal();
+      }, 700);
+    }
+
+    // ----------------------------------------------------
+    // AI SELLER ASSISTANT (Client-Side Generative Logic)
+    // ----------------------------------------------------
+    function setAiLang(lang) {
+      currentAiLang = lang;
+      const btnHinglish = document.getElementById('lang-hinglish');
+      const btnEnglish = document.getElementById('lang-english');
+      
+      if (lang === 'hinglish') {
+        btnHinglish.className = "lang-btn active-lang px-3 py-2 text-xs font-bold rounded-lg border border-forest-600 bg-forest-50 text-forest-800 transition";
+        btnEnglish.className = "lang-btn px-3 py-2 text-xs font-bold rounded-lg border border-earth-300 bg-earth-50 text-stone-600 hover:bg-earth-100 transition";
+      } else {
+        btnEnglish.className = "lang-btn active-lang px-3 py-2 text-xs font-bold rounded-lg border border-forest-600 bg-forest-50 text-forest-800 transition";
+        btnHinglish.className = "lang-btn px-3 py-2 text-xs font-bold rounded-lg border border-earth-300 bg-earth-50 text-stone-600 hover:bg-earth-100 transition";
+      }
+    }
+
+    function loadSampleCraft() {
+      const samples = [
+        {
+          title: "Natural Bamboo Tea Coasters Set (6 Pcs)",
+          price: "299",
+          category: "Bamboo",
+          details: "Cut from fresh green bamboo poles, sanded smooth by hand, finished with natural mustard seed oil polish. Heat resistant and biodegradable."
+        },
+        {
+          title: "Desi Multani Mitti & Sandalwood Herbal Bath Soap",
+          price: "180",
+          category: "Organic",
+          details: "Cold-pressed in village gaushala. Free from SLS, parabens, and animal fat. Hand-stamped with traditional seals."
+        },
+        {
+          title: "Kachchhi Hand-Embroidered Mirrorwork Cushion Cover",
+          price: "550",
+          category: "Handloom",
+          details: "Authentic Gujarati rabari embroidery with real reflective micro-mirrors on heavy khadi fabric. 16x16 inches."
+        }
+      ];
+
+      const chosen = samples[Math.floor(Math.random() * samples.length)];
+      document.getElementById('ai-title').value = chosen.title;
+      document.getElementById('ai-price').value = chosen.price;
+      document.getElementById('ai-category').value = chosen.category;
+      document.getElementById('ai-details').value = chosen.details;
+
+      showToast("Sample craft loaded!", "check");
+    }
+
+    function triggerAiGeneration(type) {
+      const title = document.getElementById('ai-title').value.trim();
+      const price = document.getElementById('ai-price').value.trim();
+      const category = document.getElementById('ai-category').value;
+      const details = document.getElementById('ai-details').value.trim();
+
+      if (!title) {
+        showToast("Please enter a Product Title first!", "alert-circle");
+        document.getElementById('ai-title').focus();
+        return;
+      }
+
+      // Show spinner
+      const loader = document.getElementById('ai-loading');
+      loader.classList.remove('hidden');
+
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        generateMockAiCopy(type, title, price, category, details);
+      }, 500);
+    }
+
+    function generateMockAiCopy(type, title, price, category, details) {
+      const outputBox = document.getElementById('ai-output-box');
+      const badge = document.getElementById('output-badge');
+      const counter = document.getElementById('char-counter');
+      const isHinglish = (currentAiLang === 'hinglish');
+
+      let generated = "";
+
+      if (type === 'desc') {
+        badge.textContent = isHinglish ? "E-Commerce Description (Hinglish)" : "E-Commerce Description (English)";
+        
+        if (isHinglish) {
+          generated = `🌟 ${title} - Asli Gaon ki Dastakari (Handmade Heritage)
+
+Kya aap dhoondh rahe hain 100% genuine aur eco-friendly handicrafts? Hamare gaon ke shilpkar lekar aaye hain vishesh roop se taiyar kiya gaya "${title}".
+
+✨ Visheshayein (Key Highlights):
+• Banawat (Craft): ${category} craftsmanship, directly made by rural karigars.
+• Detail: ${details || "Shuddh deshi tarike se hatho dwara nirmit."}
+• Kimat (Price): Only ₹${price || "399"} (Zero middleman, direct payment to village artisan).
+• Environment: 100% Eco-friendly, plastic-free packaging.
+
+📦 Delivery: All-India delivery available directly to your doorstep.
+Support local art and give your home an authentic, earthy Indian vibe!`;
+        } else {
+          generated = `🌿 Authentic Artisan Edition: ${title}
+
+Bring the soulful heritage of rural India into your modern home with this meticulously handcrafted ${title}.
+
+✨ Key Features & Specifications:
+• Craft Tradition: Authentic ${category} art form passed through generations.
+• Material & Workmanship: ${details || "100% handcrafted using locally sourced, sustainable materials."}
+• Fair Price: ₹${price || "399"} (100% goes directly to the village craftsman).
+• Sustainability: Plastic-free, carbon-conscious, and long-lasting.
+
+🎁 Perfect for everyday conscious living or unique festive gifting. Order directly via WhatsApp to connect with the maker today!`;
+        }
+      } 
+      else if (type === 'whatsapp') {
+        badge.textContent = "WhatsApp Broadcast Message";
+        
+        if (isHinglish) {
+          generated = `📢 *Naya Stock Alert: Gaon se Direct!* 🌾
+
+Namaste dosto! 🙏
+Hamare karigaro ne taiyar kiya hai naya authentic batch:
+
+🏷️ *Product:* ${title}
+💰 *Special Offer Price:* ₹${price || "299"} only!
+🌿 *Craft & Details:* ${details ? details.substring(0, 120) + '...' : '100% handcrafted & pure'}
+
+✅ *Order karne ke fayde:*
+1. Direct artisan ko support milta hai.
+2. 100% Genuine handmade quality.
+3. Fast door delivery.
+
+👉 *Abhi order karne ke liye is number par reply karein:* "HAAN, MUJHE CHAHIYE"
+Limited pieces available!`;
+        } else {
+          generated = `🌟 *Direct from Village Artisans: ${title}*
+
+Hello! 👋
+We are thrilled to present our newest handmade collection directly from our village workshop:
+
+📦 *Item:* ${title}
+💵 *Price:* ₹${price || "299"} (Limited artisan batch)
+✨ *Highlight:* ${details ? details.substring(0, 120) + '...' : 'Authentic sustainable craftsmanship'}
+
+🛒 *To book your piece right now:*
+Simply reply to this message with your *Name* and *City*. We will reserve your package immediately!
+
+Thank you for choosing rural handmade over mass-manufactured plastic. 💚`;
+        }
+      } 
+      else if (type === 'instagram') {
+        badge.textContent = "Instagram Caption & Hashtags";
+        
+        if (isHinglish) {
+          generated = `Mitti ki khushbu aur gaon ke karigaron ka jadu! ✨🌸
+
+Meet our newest labor of love: *${title}*. Har piece mein chhupi hai sadiyon purani virasat aur mehnati haathon ka hunar. 
+
+Jab aap ek handmade product khareedte hain, aap sirf ek vastu nahi, ek karigar parivar ki umeed aur aatmanirbharta ko support karte hain. ❤️
+
+💰 Price: ₹${price || "399"}
+📍 Handcrafted in rural India
+📲 Order link: Direct DM or WhatsApp order button in bio!
+
+.
+.
+#GramBazaar #VocalForLocal #HandmadeInIndia #DesiCrafts #ArtisansOfIndia #RuralArtisan #EcoFriendlyLiving #MakeInIndia #SupportSmallBusiness #IndianHeritage #SustainableCrafts`;
+        } else {
+          generated = `From the quiet heartlands of rural India straight to your living space. 🌿🏺
+
+Introducing the *${title}* — crafted with ancestral knowledge and natural patience. Unlike machine-made goods, every single item carries its own subtle, charming imperfections that tell an artisan's story.
+
+✨ Details: ${details ? details.substring(0, 100) + '...' : 'Natural materials, hand-finished by master craftspeople.'}
+🏷️ Fair Artisan Value: ₹${price || "399"}
+
+💬 DM us or click the WhatsApp link in our bio to order your bespoke piece today!
+
+.
+.
+#HandmadeHeritage #GramBazaar #ConsciousConsumer #ArtisanMade #VocalForLocalIndia #SlowCraft #IndianCraftsmanship #TraditionalCrafts #ZeroMiddlemen`;
+        }
+      }
+
+      outputBox.textContent = generated;
+      counter.textContent = `${generated.length} characters • Ready to copy`;
+      showToast("Marketing copy generated successfully!", "sparkles");
+    }
+
+    function copyAiOutput() {
+      const text = document.getElementById('ai-output-box').textContent;
+      if (!text || text.includes("Click any of the three buttons")) {
+        showToast("Generate some copy first!", "alert-circle");
+        return;
+      }
+
+      navigator.clipboard.writeText(text).then(() => {
+        const copyBtnText = document.getElementById('copy-btn-text');
+        copyBtnText.textContent = "Copied! ✓";
+        showToast("Copied to clipboard!", "check");
+        setTimeout(() => {
+          copyBtnText.textContent = "Copy Text";
+        }, 2000);
+      }).catch(() => {
+        showToast("Failed to copy. Please select and copy manually.", "alert-circle");
+      });
+    }
+
+    // ----------------------------------------------------
+    // TOAST NOTIFICATION HELPER
+    // ----------------------------------------------------
+    function showToast(msg, icon = 'check') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      const toastIcon = document.getElementById('toast-icon');
+
+      toastMsg.textContent = msg;
+      toastIcon.setAttribute('data-lucide', icon);
+      initLucide();
+
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
